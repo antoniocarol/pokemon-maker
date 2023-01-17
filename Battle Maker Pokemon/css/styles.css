@@ -1,0 +1,257 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Seymour One', sans-serif;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    filter: blur(15px);
+}
+
+.startButton, .confirmButton{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    height: 50px;
+
+    background-color: rgb(65, 212, 99);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+
+    font-family: 'Seymour One', sans-serif;
+    font-size: large;
+   
+    cursor: pointer;
+    transition: background-color 1s;
+    animation:fadeOut 3s;
+}
+
+@keyframes fadeOut{
+    100%{opacity: 1;}
+    0%{opacity: 0;}
+}
+
+.startButton:hover{
+    background-color: rgb(42, 179, 74);
+}
+
+.startButton:active{
+    transition: none;
+    background-color: rgb(23, 90, 38);
+}
+
+.selectionContainer{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(90deg, #fc466ae8 0%, #3f5efbdb 100%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    animation:fadeIn 3s;
+}
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.leftArrow, .rightArrow{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.leftArrow:hover{
+    width: 81px;
+    height: 81px;
+}
+.rightArrow:hover{
+    width: 81px;
+    height: 81px;
+}
+
+.pokemonMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.pokemonMenu img{
+    width: 300px;
+}
+
+.player, .pokemonName, .textContainer{
+    color: rgb(240, 248, 255);
+    text-transform:uppercase;
+    text-shadow: 0 -3px 0 #333,
+    0 6px 8px rgba(0,0,0,.4),
+    0 9px 10px rgba(0,0,0,.15),
+    0 30px 10px rgba(0,0,0,.18),
+    0 15px 10px rgba(0,0,0,.21);
+}
+
+.player{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.textContainer{
+    color: rgba(240, 248, 255, 0.63);
+}
+
+.pokemonName{
+    font-size: 30px;
+}
+
+.pokemonInput{
+    width: 200px;
+    height: 30px;
+
+    margin-top: 35px;
+    padding-left: 5px;
+
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.confirmButton{
+    top: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.confirmButton:hover{
+    background-color: rgb(42, 179, 74);
+}
+
+.confirmButton:active{
+    transition: none;
+    background-color: rgb(23, 90, 38);
+}
+
+.calendarContainer{
+height: 660px;
+
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    position: absolute;
+    width: 500px;
+
+    background: linear-gradient(90deg, #fc466ae8 0%, #3f5efbdb 100%);
+    border-radius: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    animation:fadeIn 3s;
+}
+.calendar{
+    text-align: center;
+}
+.calendar header{
+    position: relative;
+}
+
+h2{
+    margin-top:20px;
+    font-size: 32px;
+    text-transform: uppercase;}
+.previousButton, .nextButton{
+    position: absolute;
+    top: 50%;
+
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-top: -16px;
+
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+
+    color: #cbd1d2;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.previousButton{
+    left: 80px;
+}
+.nextButton{
+    right: 80px;
+}
+.previousButton:hover,.nextButton:hover{
+    background-color: #cbd1d2;
+    color: #f9f9f9;
+}
+.calendar table{
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.calendar thead{
+    background: linear-gradient(90deg, #fc466a 0%, #3f5efb 100%);
+
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.calendar td{
+    border: 1px solid #2215d423;
+    height: 71.4px;
+    text-align: center;
+    width: 71.4px;
+}
+.calendar tbody td{
+    cursor: pointer;
+}
+.calendar tbody td:hover{
+    background: #00addf;
+    color: #f9f9f9;
+}
+.actualDay{
+    background: #00addf;
+    color: #f9f9f9;
+}
+.previousMonth, .nextMonth{
+    color: #cbd1d2;
+}
+
+
+.hidden{
+    display: none;
+}
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--START PAGE STUFF-->
+    <div class="conteudoInicial">
+      <div class="background">
+       <video autoplay muted loop>
+          <source src="../assets/videoBackground.mp4" type="video/mp4" />
+       </video>
+      </div>
+      <button class="startButton">START</button>
+    </div>
+
+    <!--PLAYER SELECTION STUFF-->
+    <div class="pokemonSelection">
+      <div class="selectionContainer p1 hidden">
+        <img src="../assets/leftarrow.png" class="leftArrow" alt="leftArrow" />
+        <div class="pokemonMenu">
+          <span class="player">Player 1</span>
+          <span class="textContainer">Escolha o Pokemon:</span>
+          <div class="pokemonInfo">   
+             <img class="pokemonImage" alt="pokemonImage" />
+          </div>
+         <span class="pokemonName"></span>
+         <input placeholder="Search name" class="pokemonInput">
+        </div>
+        <img src="../assets/rightarrow.png" class="rightArrow" alt="rightArrow" />
+      </div>
+      <div class="selectionContainer p2 hidden">
+        <img src="../assets/leftarrow.png" class="leftArrow" alt="leftArrow" />
+        <div class="pokemonMenu">
+          <span class="player">Player 2</span>
+          <span class="textContainer">Escolha o Pokemon:</span>
+          <div class="pokemonInfo">   
+            <img class="pokemonImage" alt="pokemonImage" />
+          </div>
+          <span class="pokemonName"></span>
+          <input placeholder="Search name" class="pokemonInput">
+        </div>
+        <img src="../assets/rightarrow.png" class="rightArrow" alt="rightArrow" />
+      </div>
+      <button class="confirmButton hidden">CONFIRM</button>
+    </div>
+    <!--CALENDAR STUFF-->
+    <div class="calendarContainer hidden">
+      <div class="calendar">
+         <header>
+             <h2 id="month">Abril</h2>
+             <a class="previousButton" id="previousButtonID"><</a>
+             <a class="nextButton" id="nextButtonID">></a>
+         </header>
+         <table>
+             <thead>
+                 <tr>
+                     <td>Dom</td>
+                     <td>Seg</td>
+                     <td>Ter</td>
+                     <td>Qua</td>
+                     <td>Qui</td>
+                     <td>Sex</td>
+                     <td>Sab</td>
+                 </tr>
+             </thead>
+             <tbody id="days">
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+             </tbody>
+         </table>
+         <footer>
+          <h2 id="year">2023</h2>
+         </footer>
+     </div>
+ </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
